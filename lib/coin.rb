@@ -12,6 +12,6 @@ class Counter
     result = @coin_array.each_with_index.map do |c,i|
       (value_array[i] > 0) ? "#{c[0]}: #{value_array[i]} " : ''
     end
-    result.join('')
+    result.keep_if { |x| x != ''}
   end
 end
